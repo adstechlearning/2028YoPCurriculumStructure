@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102a43">
+  <meta name="description" content="Browse the eight-semester AIML course plan, search courses, and review credit totals.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <title>Semester-wise AIML Curriculum</title>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark" aria-hidden="true">AI</span><span><strong>AIML</strong><small>Programme curriculum</small></span></div>
+    <button id="install" class="install" type="button" hidden>Install app</button>
+  </header>
+  <main class="page">
+    <section class="intro">
+      <p class="eyebrow">UNDERGRADUATE PROGRAMME</p>
+      <h1>Semester-wise curriculum</h1>
+      <p class="lede">Explore the course plan, find a course by name or code, and track credits across all eight semesters.</p>
+    </section>
+    <section class="summary" aria-label="Programme credit summary">
+      <div class="summary-card"><span>Total numeric credits</span><strong id="overall-total">164</strong></div>
+      <div class="summary-card"><span>Semesters</span><strong>8</strong></div>
+      <div class="summary-card"><span>Listed courses</span><strong id="course-count">64</strong></div>
+      <p class="note">“M” credit values were not specified in the supplied curriculum and are excluded from the numeric total.</p>
+    </section>
+    <section class="curriculum" aria-label="Curriculum by semester">
+      <div class="semester-tabs" id="semester-tabs" role="tablist" aria-label="Select semester"></div>
+      <div class="section-head">
+        <div><p class="eyebrow">DETAILED CURRICULUM</p><h2 id="semester-title">Semester 1</h2><p id="semester-total" class="semester-total"></p></div>
+        <label class="search"><span>Search courses</span><input id="search" type="search" placeholder="Course name or code" autocomplete="off"></label>
+      </div>
+      <div class="table-shell"><table><thead><tr><th scope="col">Code</th><th scope="col">Course</th><th scope="col" class="right">Credits</th></tr></thead><tbody id="course-rows"></tbody><tfoot><tr><th colspan="2" scope="row">Semester numeric total</th><td id="table-total" class="right"></td></tr></tfoot></table></div>
+      <p id="empty" class="empty" hidden>No courses match that search. Try a different name or code.</p>
+      <p id="status" class="sr-only" aria-live="polite"></p>
+    </section>
+    <footer>Curriculum data based on the details supplied. “M” credit notation is preserved as provided.</footer>
+  </main>
+  <script src="app.js" defer></script>
+</body>
+</html>

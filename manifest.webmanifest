@@ -1,0 +1,15 @@
+{
+  "id": "./",
+  "name": "Semester-wise AIML Curriculum",
+  "short_name": "AIML Curriculum",
+  "description": "Browse and search the semester-wise AIML course structure and credits.",
+  "lang": "en",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f3f6f8",
+  "theme_color": "#102a43",
+  "icons": [
+    {"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
+  ]
+}
